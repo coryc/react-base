@@ -1,0 +1,13 @@
+{
+  "name": "reactbase",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Cory Caines (cory@kreatednine.com)",
+  "dependencies": {
+    "gulp": "~3.9.0",
+    "yargs": "~3.31.0",
+    "gulp-util": "~3.0.7",
+    "run-sequence": "~1.1.5",
+    "del": "~2.2.0"
+  }
+}
