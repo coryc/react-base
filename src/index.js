@@ -1,11 +1,9 @@
-/*
 import React from 'react';
 import {render} from 'react-dom';
 
+import Hello from './hello';
+
 render(
-    <div>this is a test</div>,
+    <Hello name="world"/>,
     document.getElementById('app')
 );
-*/
-
-console.log('__here');

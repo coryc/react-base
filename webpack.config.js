@@ -13,7 +13,7 @@ module.exports = {
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/',
+        publicPath: '',
         filename: 'app.js'
     },
     plugins:[
@@ -25,7 +25,8 @@ module.exports = {
             minify: {
                 removeComments: true,
             },
-            inject: true
+            inject: true,
+            title: "react-base"
         })
     ],
     module: {
