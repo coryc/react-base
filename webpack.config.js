@@ -1,8 +1,8 @@
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import path from 'path';
 
-module.exports = {
+export default {
     target: 'web',
     devtool: 'eval-source-map',
     resolve: {
@@ -34,4 +34,4 @@ module.exports = {
           {test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel-loader']}
         ]
     }
-}
+};
