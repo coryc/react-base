@@ -30,11 +30,24 @@ export default {
             },
             inject: true,
             title: "react-base"
+        }),
+        new webpack.LoaderOptionsPlugin({
+            minimize: false,
+            debug: true,
+            noInfo: true, // set to false to see a list of every file being bundled.
+            options: {
+                sassLoader: {
+                    includePaths: [path.resolve(__dirname, 'src', 'scss')]
+                },
+                context: '/',
+                postcss: () => [autoprefixer],
+            }
         })
     ],
     module: {
         rules: [
-          {test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel-loader']}
+          {test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel-loader']},
+          {test: /(\.css|\.scss|\.sass)$/, loaders: ['style-loader', 'css-loader?sourceMap', 'postcss-loader', 'sass-loader?sourceMap']}
         ]
     }
 };
